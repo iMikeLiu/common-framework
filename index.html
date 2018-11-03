@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//CN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//CN" "http://www.w3.org/TR/html4/loose.dtd">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html>
 <head>
 <script>
 </script>
-<script src="../script/mobile.js"></script>
-<script src="../script/jquery.js"></script>
+<script src="script/mobile.js"></script>
+<script src="script/jquery.js"></script>
 <script type="text/javascript" scr="script/index.js"></script>
 <script type="text/javascript" src="script/marked.min.js"></script>
 <script type="text/javascript" src="script/topic.js"></script>
@@ -26,9 +26,6 @@
 <h1>
   <div id="date1"></div>
 </h1>
-<div class="Main">
-  <p>提示：本页面制作水平逼近20世纪90年代初。</p>
-</div>
 
 <div id="result"></div>
 
@@ -73,26 +70,6 @@ marked.setOptions({
     });
   var html=marked(data)
    document.getElementById("result").innerHTML=html;}
-);
-$.get("../markdown/索引.md",function(data){
-var rendererMD = new marked.Renderer();
-marked.setOptions({
-      renderer: rendererMD,
-      gfm: true,
-      tables: true,
-      breaks: false,
-      pedantic: false,
-      sanitize: false,
-      smartLists: true,
-      smartypants: false
-    });
-  marked.setOptions({
-        highlight: function (code) {
-        return hljs.highlightAuto(code).value;
-      }
-    });
-  var html=marked(data)
-   document.getElementById("menu").innerHTML=html;}
 );
 </script>
 <script src="script/mainShow.js"></script>
