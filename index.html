@@ -35,7 +35,7 @@
   var flag=false
 var query=GetQueryString("page")
 if(query==null)query="index.md"
-$.get("../markdown/"+query,function(data){
+$.get("./markdown/"+query,function(data){
   switch(query.split(".")[1])
 {
 case "cpp":
